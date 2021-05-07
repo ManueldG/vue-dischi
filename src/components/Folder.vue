@@ -106,6 +106,7 @@ export default {
         flex-wrap: wrap;
         justify-content:center;
         list-style: none;
+        
 
         li{ background-color:antiquewhite;
             margin: 10px;
@@ -115,18 +116,21 @@ export default {
                 width:250px;
                 margin: 10px;
             }
-            ul {
-                flex-direction: column;
+            ul {                
                 display: flex;
+                flex-direction: column;
                 flex-wrap: wrap;
                 justify-content: center;
                 list-style: none;
+                padding: 5px;
                 li{
                     flex-direction: column;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                list-style: none;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    align-items: center;
+                    list-style: none;
+                    list-style-position: inside;
                 }
 
             }
