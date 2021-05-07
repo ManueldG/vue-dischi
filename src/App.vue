@@ -16,7 +16,9 @@ Vi ricordo che questo è un lavoro che si articolerà su due giornate.
 <template>
   <div id="app">
     <img src="@/../../logo.png" alt="Logo" id="LOGO">
-
+    
+    <Choose/>
+    
     <Folder/>
     
     <HelloWorld msg=""/>
@@ -25,12 +27,13 @@ Vi ricordo che questo è un lavoro che si articolerà su due giornate.
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Choose from './components/Choose.vue'
 import Folder from './components/Folder.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,Folder
+    HelloWorld,Folder,Choose
   }
 }
 </script>
