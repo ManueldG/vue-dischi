@@ -107,7 +107,10 @@ export default {
         justify-content:center;
         list-style: none;
 
-        li{            
+        li{ background-color:antiquewhite;
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 2px 2px black ;            
             img{
                 width:250px;
                 margin: 10px;

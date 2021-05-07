@@ -44,7 +44,13 @@ export default {
 #app {
   font-family: Montserrat,Helvetica, Arial, sans-serif;
   font-weight: 600;
-  background-color: yellow;
+  background: linear-gradient(90deg, black 30%, transparent 60%)
+  ,linear-gradient(
+    to right, #e6e94d90 0%, #e6e94d90 50%, #13bd2f90 50%, #13bd2f90 100%
+  ),linear-gradient(    
+    to bottom, #e6e94d90 0%,#e6e94d90 50%, #13bd2f90 50%, #13bd2f90 100%
+  );
+  background-size:40px 45px;
   color: blue; 
   #LOGO{
     margin: 100px;
