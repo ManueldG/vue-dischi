@@ -54,18 +54,15 @@ export default {
     },
     methods:{
         foldersGET(){
-            // Make a request for a user with a given ID
             axios.get(this.urlAPI)
             .then((response) =>{
                 this.folders = response.data;
                 console.log(response);
             })
             .catch(function (error) {
-                // handle error
                 console.log(error);
             })
             .then(function () {
-                // always executed
             })
         }
     }

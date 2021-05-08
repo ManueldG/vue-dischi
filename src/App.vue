@@ -17,7 +17,7 @@ Vi ricordo che questo è un lavoro che si articolerà su due giornate.
   <div id="app">
     <img src="@/../../logo.png" alt="Logo" id="LOGO">
     
-    <Choose/>
+    <Choose :genere="gen" />
     
     <Folder/>
     
@@ -32,6 +32,11 @@ import Folder from './components/Folder.vue'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      gen:'prova'
+    }
+  },
   components: {
     HelloWorld,Folder,Choose
   }
@@ -51,7 +56,7 @@ export default {
   ,linear-gradient(
     to right, #e6e94d90 0%, #e6e94d90 50%, #13bd2f90 50%, #13bd2f90 100%
   ),linear-gradient(    
-    to bottom, #e6e94d90 0%,#e6e94d90 50%, #13bd2f90 50%, #13bd2f90 100%
+    45deg, #e6e94d90 0%,#e6e94d90 50%, #13bd2f90 50%, #13bd2f90 100%
   );
   background-size:40px 45px;
   color: blue; 
