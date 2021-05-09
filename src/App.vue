@@ -17,9 +17,9 @@ Vi ricordo che questo è un lavoro che si articolerà su due giornate.
   <div id="app">
     <img src="@/../../logo.png" alt="Logo" id="LOGO">
     
-    <Choose :gen="gen" />
+    <Choose @changeP="genere" />
     
-    <Folder/>
+    <Folder :gen="gen"/>
     
     <HelloWorld msg=""/>
   </div>
@@ -34,11 +34,17 @@ export default {
   name: 'App',
   data(){
     return{
-      gen:'prova'
+      gen:"1",
     }
   },
   components: {
     HelloWorld,Folder,Choose
+  },
+  methods:{
+    genere(testo){
+    console.log("prova Emit",testo);
+    this.gen=testo;
+    }
   }
 }
 </script>

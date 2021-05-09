@@ -13,7 +13,7 @@
           </div>
           <div  v-else>
              <ul>
-              <li v-for="( fold , index ) in folders.response" :key="index">
+              <li v-for="( fold , index ) in folders.response.filter((fold)=>{ return ((gen !== '1') ?fold.genre.toLowerCase()===(gen): true) })" :key="index">
                 <img :src="fold.poster" :alt="fold.title+fold.year">
                 <ul class="detail">
                     <li  v-for="(el,i) in fold" :key="i">
@@ -37,18 +37,23 @@
 import axios from "axios";
 export default {
     name: 'Folder',
+    props:{
+        gen:String
+        },
     data(){
         return {
             urlAPI : 'https://flynn.boolean.careers/exercises/api/array/music',
             folders : [],
             loading : true,
+            
         }
     },
     created(){
             this.foldersGET();
             setTimeout(()=>{
                 this.loading = false;
-            },2000)
+            },2000);
+            this.emit();
                      
         
     },
@@ -64,6 +69,9 @@ export default {
             })
             .then(function () {
             })
+        },
+        emit(){
+            console.log('prova2');
         }
     }
 
@@ -74,6 +82,9 @@ export default {
 
 <style scoped lang="scss">
 
+
+
+
 .folder{
     display:flex;
     justify-content: center;
@@ -81,6 +92,7 @@ export default {
     .loading{
         width: 400px;
         height: 300px;
+        margin-bottom: 100px;
         background-color: rgb(60, 134, 177);
         color: rgb(176, 196, 207);
         .square{
