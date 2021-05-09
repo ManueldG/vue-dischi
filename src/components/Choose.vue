@@ -1,16 +1,16 @@
 <template>
 <div class="choose">
     <label for="folder">scegli genere</label>
-    <select name="folder" id="folder" @change="($emit('view',currentValue))">
+    <select name="folder" id="folder" @change="view">
       <option v-for="(val,index) in generi" :key="index" :value="val.toLowerCase()">{{val}}</option>
-    </select>{{genere}}
+    </select>{{gen}}
 </div>
 </template>
 
 <script>
 export default {
     name: 'Choose',
-    props: {genere:String},
+    props: {gen:String},
     data() {
         return{
             currentValue:'',

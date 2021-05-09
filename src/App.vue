@@ -17,7 +17,7 @@ Vi ricordo che questo è un lavoro che si articolerà su due giornate.
   <div id="app">
     <img src="@/../../logo.png" alt="Logo" id="LOGO">
     
-    <Choose :genere="gen" />
+    <Choose :gen="gen" />
     
     <Folder/>
     
